@@ -1,0 +1,64 @@
+
+<div class="container content-btm">
+  <div class="row">
+    <div class="col-md-12 ">
+      <ul class="atten-title">
+        <li>List All Employees</li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-sm-3 col-sm-offset-9 atten-input leaveinput">
+      <div class="leavegridsearch">
+        <input #gb type="text" pInputText size="50" placeholder="Search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <p-dataTable class="primegrid primegridfirsttd" [value]="employeeListData" [rows]="10"
+               [paginator]="true" [globalFilter]="gb" #bookedbyme>
+
+    <p-column header="S.No" field="rowIndex">
+
+      <template let-i="rowIndex" pTemplate="body">
+        {{i+1}}
+      </template>
+    </p-column>
+
+    <p-column field="emp_id" header="Employee ID" [sortable]="true" [filter]="true"
+              filterMatchMode="contains" filterPlaceholder="Search">
+      <!-- <template let-col let-meetingAttendItem="rowData" pTemplate type="body">
+         <div tooltip="{{meetingAttendItem[col.field]}}">{{meetingAttendItem[col.field]}}</div>
+       </template>-->
+    </p-column>
+    <p-column field="emp_name" header="Employee Name" [sortable]="true" [filter]="true"
+              filterMatchMode="contains" filterPlaceholder="Search">
+    </p-column>
+    <p-column field="emp_email" header="Employee Email"  [sortable]="true" [filter]="true"
+              filterMatchMode="contains" filterPlaceholder="Search">
+    </p-column>
+
+    <p-column field="emp_gender" header="Gender"  [sortable]="true" [filter]="true"
+              filterMatchMode="contains" filterPlaceholder="Search">
+    </p-column>
+    <p-column  header="Action">
+      <template let-col let-employeeListData="rowData" pTemplate type="body">
+        <label class="last-td">
+          <span (click)="editEmployee(employeeListData)"> view </span>
+        </label>
+
+      </template>
+    </p-column>
+  </p-dataTable>
+</div>
+
+
+
+

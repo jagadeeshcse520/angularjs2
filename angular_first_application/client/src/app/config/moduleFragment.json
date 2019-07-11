@@ -1,0 +1,8 @@
+{
+    "LEAVE_MANAGEMENT.LEAVE_REQUEST" : "/viewleaverequest",
+    "LEAVE_MANAGEMENT.LEAVE_APPROVED" : "/editleave" ,  
+    "ACTION_ITEMS.AI_CREATED" : "/myactionitems",
+    "ACTION_ITEMS.AI_REASSIGNED" : "/editactionitems",
+    "BROADCAST.BC_CREATED" : "/broadcasts/id"    
+    
+}
