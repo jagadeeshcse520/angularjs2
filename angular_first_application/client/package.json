@@ -33,7 +33,7 @@
     "fullcalendar": "^3.3.1",
     "ifvisible.js": "^2.0.11",
     "intro.js": "^2.8.0-alpha.1",
-    "moment": "^2.18.1",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.13",
     "ng-click-outside": "^2.4.1",
     "ng2-bootstrap": "^1.6.3",
